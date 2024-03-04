@@ -1,10 +1,17 @@
 <?php
+Class ReverseWord{
 
-$string = "Hello!";
+static public function Reversing($string){
+    
+    $str_split = str_split($string);
+    $reverse_array = array_reverse($str_split);
+    $result = implode($reverse_array);
 
-$str_split = str_split($string);
-$reverse_array = array_reverse($str_split);
-$result = implode($reverse_array);
+    return $result;
+}
+}
 
-echo $result;
+$reverse_string = ReverseWord::Reversing('Hello World!');
+
+echo $reverse_string;
  
